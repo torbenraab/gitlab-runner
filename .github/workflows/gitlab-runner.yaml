@@ -2,7 +2,7 @@ name: Gitlab Runner Service
 on: [repository_dispatch]
 jobs:
   build:
-    runs-on: self-hosted
+    runs-on: ubuntu-20.04
     steps:
       - name: Gitlab Runner
         uses: torbenraab/gitlab-runner-action@v0.0.3
