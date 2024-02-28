@@ -14,9 +14,8 @@ jobs:
           remove-haskell: 'true'
 
       - name: Gitlab Runner
-        uses: torbenraab/gitlab-runner-action@main
+        uses: torbenraab/gitlab-runner-action@v0.0.3
         with:
           token: "${{ github.event.client_payload.token }}"
           name: ${{ github.run_id }}
-          tag-list: "crosscicd"
           gitlab-instance: "${{ github.event.client_payload.url }}"
