@@ -11,7 +11,7 @@ jobs:
           oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
           tags: tag:ci
       - name: Gitlab Runner
-        uses: torbenraab/gitlab-runner-action@v0.0.4
+        uses: torbenraab/gitlab-runner-action@main
         with:
           token: "${{ github.event.client_payload.token }}"
           name: ${{ github.run_id }}
