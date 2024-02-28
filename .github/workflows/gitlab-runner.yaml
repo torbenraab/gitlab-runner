@@ -4,6 +4,12 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
+      - name: Tailscale
+        uses: tailscale/github-action@v2
+        with:
+          oauth-client-id: ${{ secrets.TS_OAUTH_CLIENT_ID }}
+          oauth-secret: ${{ secrets.TS_OAUTH_SECRET }}
+          tags: tag:ci
       - name: Gitlab Runner
         uses: torbenraab/gitlab-runner-action@v0.0.3
         with:
